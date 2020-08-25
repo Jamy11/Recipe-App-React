@@ -35,12 +35,15 @@ const App = () => {
 
   return (
     <div className = "App">
-      
+      <div className="Header">
+      <header className = "header-text">Recipe App</header>
       <form onSubmit={getSearch} className="search-form">
         <input className="search-bar" type="text" value={search} onChange={updateSearch}></input>
         <button  className="search-button" type="submit">Search</button>
       </form>
-
+      </div>
+      
+      
       <div className='recipes'>
       {recipes.map(recipe =>(
         <Recipe 
@@ -52,7 +55,7 @@ const App = () => {
         />
       ))}
       </div>
-    </div>
+    </div>   
 
   );
 };
